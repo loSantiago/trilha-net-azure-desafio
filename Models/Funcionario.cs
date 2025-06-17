@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace TrilhaNetAzureDesafio.Models
 {
     public class Funcionario
@@ -22,6 +24,8 @@ namespace TrilhaNetAzureDesafio.Models
         public string Ramal { get; set; }
         public string EmailProfissional { get; set; }
         public string Departamento { get; set; }
+
+        [Precision(8, 2)]    
         public decimal Salario { get; set; }
         public DateTimeOffset? DataAdmissao { get; set; }
     }
